@@ -1,0 +1,29 @@
+{
+  "repo": "tuannx/cloudnative-pg",
+  "commit": "530a1fe3cd99c3185d2858e21bb75b28063a82ba",
+  "date": "2026-11-21",
+  "environment": "Linux VM, Go 1.25.4 host + go1.27.4 toolchain (per go.mod), AMD EPYC 9D25, GOMAXPROCS=2, GOFLAGS=-p=2, CGO_ENABLED=0, 4 vCPU shared, ~7.7GB RAM",
+  "benchtime": "10000x",
+  "count": 1,
+  "benches": {
+    "BenchmarkPerfParsePgControldataOutput": {
+      "ns_per_op": 16206,
+      "bytes_per_op": 2424,
+      "allocs_per_op": 8,
+      "unit": "ns/op"
+    },
+    "BenchmarkPerfGetFencedInstances": {
+      "ns_per_op": 11728,
+      "bytes_per_op": 3322,
+      "allocs_per_op": 36,
+      "unit": "ns/op"
+    },
+    "BenchmarkPerfInheritLabels": {
+      "ns_per_op": 27479,
+      "bytes_per_op": 4472,
+      "allocs_per_op": 9,
+      "unit": "ns/op"
+    }
+  },
+  "note": "Shared/throttled VM CPU: absolute ns/op varies between runs; harness verdicts should be read as warn-level signals, re-run on a quiet machine for tight gates."
+}
